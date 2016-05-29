@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @instrumental.name %>
+</p>
+
+<%= @instrumental.images.each do |img| %>
+	<%= image_tag img.url(:large) %> </br>
+<% end %>
+
+<%= link_to 'Edit', edit_instrumental_path(@instrumental) %> |
+<%= link_to 'Back', instrumentals_path %>

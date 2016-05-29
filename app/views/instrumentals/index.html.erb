@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Instrumentals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @instrumentals.each do |instrumental| %>
+      <tr>
+        <td><%= instrumental.name %></td>
+        <td><%= link_to 'Show', instrumental %></td>
+        <td><%= link_to 'Edit', edit_instrumental_path(instrumental) %></td>
+        <td><%= link_to 'Destroy', instrumental, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Instrumental', new_instrumental_path %>
